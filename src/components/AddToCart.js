@@ -7,10 +7,10 @@ import AmountButtons from "./AmountButtons";
 
 const AddToCart = ({ product }) => {
   const { colors, id, stock } = product;
-  console.log(product);
   const [mainColor, setMainColor] = useState(colors[0]);
   const [amount, setAmount] = useState(1);
   const { addtocart } = useCartContext();
+
   const increase = () => {
     setAmount((oldAmount) => {
       let tempAmount = oldAmount + 1;
@@ -20,6 +20,7 @@ const AddToCart = ({ product }) => {
       return tempAmount;
     });
   };
+
   const decrease = () => {
     setAmount((oldAmount) => {
       let tempAmount = oldAmount - 1;

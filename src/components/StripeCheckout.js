@@ -9,7 +9,6 @@ import {
 } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { useCartContext } from "../context/cart_context";
-import { useUserContext } from "../context/user_context";
 import { formatPrice } from "../utils/helpers";
 import { useHistory } from "react-router-dom";
 import PaypalForm from "./PaypalForm";
@@ -17,8 +16,7 @@ import PaypalForm from "./PaypalForm";
 const promise = loadStripe(`${process.env.REACT_APP_STRIPE_PUBLIC_KEY}`);
 
 const CheckoutForm = () => {
-  const { cart, total_amount, shipping_fee, clearCart, user } =
-    useCartContext();
+  const { cart, total_amount, shipping_fee, clearCart } = useCartContext();
   const history = useHistory();
   // stripe variables
   const [success, setSuccess] = useState(false);
@@ -67,6 +65,7 @@ const CheckoutForm = () => {
     setDisabled(event.empty);
     setError(event.error ? event.error.message : "");
   };
+
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     setProcessing(true);

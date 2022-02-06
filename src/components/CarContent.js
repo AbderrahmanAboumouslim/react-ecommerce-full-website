@@ -8,6 +8,7 @@ import CartTotals from "./CartTotals";
 
 const CartContent = () => {
   const { cart, clearCart } = useCartContext();
+
   return (
     <Wrapper className="section section-center">
       <CartColumns />

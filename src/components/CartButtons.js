@@ -10,6 +10,7 @@ const CartButtons = () => {
   const { closeSidebar } = useProductsContext();
   const { total_items, clearCart } = useCartContext();
   const { isAuthenticated, loginWithRedirect, logout } = useUserContext();
+
   return (
     <Wrapper className="cart-wrapper">
       <Link onClick={closeSidebar} to="/cart" className="cart-flex">
