@@ -21,8 +21,6 @@ const SingleProductPage = () => {
   const history = useHistory();
   const { images, name, price, description, stock, company, stars, reviews } =
     single_product;
-  console.log(images);
-  console.log(name);
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
     // eslint-disable-next-line

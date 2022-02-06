@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const ProductImages = ({ images = [{ url: "" }] }) => {
-  console.log(images);
   const [mainImage, setMainImage] = useState(images[0]);
   return (
     <Wrapper>
@@ -10,7 +9,6 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
         <img src={mainImage.url} alt="thumbnail" />
         <div className="gallery">
           {images.map((product_image, index) => {
-            console.log(product_image);
             return (
               <img
                 key={index}
