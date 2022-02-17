@@ -74,12 +74,14 @@ const Wrapper = styled.section`
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
+    color: var(--clr-white);
+    /* color: var(--clr-black); */
     border-top-right-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
   }
   .submit-btn:hover {
-    color: var(--clr-white);
+    color: gray;
+    /* color: var(--clr-white); */
   }
   @media (min-width: 992px) {
     .content {

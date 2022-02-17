@@ -57,6 +57,9 @@ const Wrapper = styled.section`
     .hero-btn {
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
+      &:hover {
+        color: gray;
+      }
     }
     .img-container {
       display: block;
